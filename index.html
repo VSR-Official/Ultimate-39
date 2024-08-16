@@ -73,8 +73,27 @@
             background: linear-gradient(135deg, #00aaff, #005577, #00aaff);
             background-size: 300% 300%;
             -webkit-background-clip: text; /* Clip background to text */
+            -moz-background-clip: text; /* Firefox vendor prefix */
             background-clip: text;
-            animation: flow 5s linear infinite; /* Apply animation */
+            -webkit-animation: flow 5s linear infinite; /* Apply animation */
+            -moz-animation: flow 5s linear infinite; /* Firefox vendor prefix */
+            animation: flow 5s linear infinite;
+        }
+        @-webkit-keyframes flow {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+        @-moz-keyframes flow {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
         }
         @keyframes flow {
             0% {
